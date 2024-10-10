@@ -27,4 +27,11 @@ public class BasicDSA {
         }
         return result;
     }
+
+    /**
+     * 206. Reverse Linked List
+     * https://algo.monster/liteproblems/206
+     * https://leetcode.com/problems/reverse-linked-list
+     */
+    
 }
