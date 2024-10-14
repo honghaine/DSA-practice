@@ -33,5 +33,45 @@ public class BasicDSA {
      * https://algo.monster/liteproblems/206
      * https://leetcode.com/problems/reverse-linked-list
      */
-    
+    public ListNode reverseList(ListNode head) {
+        ListNode dummyNode = new ListNode();
+        ListNode current = head;
+
+        while (current != null) {
+            ListNode nextTemp = current.next;
+
+            current.next = dummyNode.next;
+
+            dummyNode.next = current;
+
+            current = nextTemp;
+        }
+
+        return dummyNode.next;
+    }
+}
+
+//    ListNode nextTemp = current.next;
+//
+//            current.next = dummyNode.next;
+//
+//                    dummyNode.next = current;
+//
+//                    current = nextTemp;
+
+class ListNode {
+    int val;
+    ListNode next;
+
+    ListNode() {
+    }
+
+    ListNode(int val) {
+        this.val = val;
+    }
+
+    ListNode(int val, ListNode next) {
+        this.val = val;
+        this.next = next;
+    }
 }
